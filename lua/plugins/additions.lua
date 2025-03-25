@@ -17,4 +17,7 @@ return {
     },
     opts = require "configs.conf-harpoon",
   },
+  {
+    "ggandor/leap.nvim",
+  },
 }

@@ -42,3 +42,9 @@ map(
   { desc = "Open harpoon window" }
 )
 
+-- LEAP CONFIG
+
+local leap = require("leap")
+map({'n', 'x', 'o'}, 's', function() leap.leap({}) end)
+map({'n', 'x', 'o'}, 'S', function() leap.leap({ backward = true }) end)
+
