@@ -2,7 +2,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    opts = require "configs.conform",
+    opts = require "configs.conf-conform",
   },
   {
     "nvim-tree/nvim-tree.lua",
@@ -11,7 +11,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require "configs.lspconfig"
+      require "configs.conf-lspconfig"
     end,
   },
   {
@@ -20,6 +20,6 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
-    opts = require "configs.nvim-cmp",
+    opts = require "configs.conf-nvim-cmp",
   }
 }
