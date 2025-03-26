@@ -10,9 +10,15 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    dependencies = { "williamboman/mason-lspconfig.nvim" },
     config = function()
       require "configs.conf-lspconfig"
     end,
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    dependencies = { "williamboman/mason.nvim" },
+    opts = require "configs.conf-mason-lspconfig",
   },
   {
     "windwp/nvim-autopairs",

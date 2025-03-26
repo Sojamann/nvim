@@ -1,3 +1,8 @@
+-- NOTE: this file is used via
+--    - setup of the lspconfig plugin
+--    - config-mason-lsp loads the file for getting to
+--      the servers
+
 local configs = require "nvchad.configs.lspconfig"
 
 -- load default settings
@@ -10,7 +15,6 @@ local servers = {
   ols = {},             -- odin
   zls = {},             -- zig
   clangd = {},          -- c
-  nixd = {},            -- nix
   markdown_oxide = {},  -- markdown
   bashls = {},          -- shell languages
 }
@@ -23,3 +27,5 @@ for name, opts in pairs(servers) do
 
   require("lspconfig")[name].setup(opts)
 end
+
+return { servers=servers }
