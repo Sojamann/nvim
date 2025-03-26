@@ -3,11 +3,16 @@ local configs = require "nvchad.configs.lspconfig"
 -- load default settings
 configs.defaults()
 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 local servers = {
-  pyright = {},
-  gopls = {},
-  ols = {},
-  zls = {},
+  pyright = {},         -- python
+  gopls = {},           -- go
+  ols = {},             -- odin
+  zls = {},             -- zig
+  clangd = {},          -- c
+  nixd = {},            -- nix
+  markdown_oxide = {},  -- markdown
+  bashls = {},          -- shell languages
 }
 
 -- lsps with default config

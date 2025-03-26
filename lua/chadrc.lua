@@ -7,7 +7,7 @@ local M = {}
 
 M.base46 = {
   transparency = true,
-  theme = "carbonfox",
+  theme = "rosepine",
 }
 
 M.nvdash = { load_on_startup = true }
