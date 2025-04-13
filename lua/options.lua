@@ -8,6 +8,13 @@ vim.opt.relativenumber = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+-- Indenting
+vim.opt.smartindent = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
