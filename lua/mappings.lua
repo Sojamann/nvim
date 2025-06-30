@@ -13,34 +13,11 @@ map("v", "K", ":m '<-2<CR>gv=gv")
 local harpoon = require("harpoon")
 
 map("n", "<leader>a", function() harpoon:list():add() end)
+map("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 map("n", "<C-H>", function() harpoon:list():select(1) end, { desc = "Open harpooned file 1" })
 map("n", "<C-J>", function() harpoon:list():select(2) end, { desc = "Open harpooned file 2" })
 map("n", "<C-K>", function() harpoon:list():select(3) end, { desc = "Open harpooned file 3" })
 map("n", "<C-L>", function() harpoon:list():select(4) end, { desc = "Open harpooned file 4" })
-
-local conf = require("telescope.config").values
-local function toggle_telescope(harpoon_files)
-    local file_paths = {}
-    for _, item in ipairs(harpoon_files.items) do
-        table.insert(file_paths, item.value)
-    end
-
-    require("telescope.pickers").new({}, {
-        prompt_title = "Harpoon",
-        finder = require("telescope.finders").new_table({
-            results = file_paths,
-        }),
-        previewer = conf.file_previewer({}),
-        sorter = conf.generic_sorter({}),
-    }):find()
-end
-
-map(
-  "n",
-  "<C-e>",
-  function() toggle_telescope(harpoon:list()) end,
-  { desc = "Open harpoon window" }
-)
 
 -- LEAP CONFIG
 
