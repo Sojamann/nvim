@@ -29,5 +29,11 @@ return {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     }
-  }
+  },
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    ft = {"markdown"},
+    opts = {},
+  },
 }
